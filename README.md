@@ -3,8 +3,9 @@
 안녕하세요 Compose 코드랩에 오신걸 환영합니다.  
 다음은 코드랩을 진행하기 위한 안내입니다.
 
-## 1. Compose 코드랩 : [원본 링크](https://github.com/googlecodelabs/android-compose-codelabs)   
-- 원본에 있는 코드랩과 내용은 동일하지만, 빠른 진행을 돕기 위해서 각 주차 별로 진행될 코드랩을 주 단위로 분리해 두었습니다. 
+## 1. Compose 코드랩 
+- [Pathway 보러가기](https://developer.android.com/courses/pathways/compose)
+- [원본 코드랩 링크](https://github.com/googlecodelabs/android-compose-codelabs) : 원본에 있는 코드랩과 내용은 동일하지만, 빠른 진행을 돕기 위해서 각 주차 별로 진행될 코드랩을 주 단위로 분리해 두었습니다. 
 
 ## 2. 준비물
 - [Android Studio Arctic Fox](https://developer.android.com/studio)
