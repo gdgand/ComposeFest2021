@@ -1,3 +1,2 @@
 # ComposeFest2021
-2021 DevFest ComposeFest 코드랩 Repo 입니다 
-TODO : repo fork 하는 방법 
+1주차 자료가 올라갈 예정입니다. 
