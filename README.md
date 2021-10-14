@@ -4,26 +4,22 @@
 다음은 코드랩을 진행하기 위한 안내입니다.
 <br/><br/>
 ## 진행 일정
-----
 2021년 11월 1일 ~ 30일   
 매주 월요일 코드랩 진행을 돕기 위한 주요 설명 영상을 공개합니다.   
 👉 [영상 보러가기](https://sites.google.com/view/devfest-korea-2021/compose-codelab)
 <br/><br/>
 
 ## Compose 코드랩 
-----
 - [Pathway 보러가기](https://developer.android.com/courses/pathways/compose)
 - [원본 코드랩 링크](https://github.com/googlecodelabs/android-compose-codelabs) : 원본에 있는 코드랩과 내용은 동일하지만, 빠른 진행을 돕기 위해서 각 주차 별로 진행될 코드랩을 주 단위로 분리해 두었습니다.   
 <br/>
 ## 준비물
-----
 - [Android Studio Arctic Fox](https://developer.android.com/studio)
 - 오픈 카톡방 참여 (https://open.kakao.com/o/gQSlqyEd)
 
 <br/>
 
 ## Repo fork 하기 
-----
 
 1. Github 페이지 오른쪽 상단 위의 fork 클릭 
     <img width="1345" alt="compose_1" src="https://user-images.githubusercontent.com/360685/137338744-9d96f9ab-e02e-4ddf-a095-52d53334dbc0.png">
@@ -39,7 +35,6 @@
 <br/>
 
 ## 코드랩 진행하기
-----
 TBD 
 
 <br/>
@@ -47,5 +42,4 @@ TBD
 ## 매주 공개되는 자료 내 fork 브랜치로 땡겨오기
 (메인 브랜치와 Sync 맞추는 방법)
 
-----
 TBD
