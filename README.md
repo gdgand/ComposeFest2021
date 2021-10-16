@@ -36,10 +36,27 @@
 <br/>
 
 ## 코드랩 진행하기 
+1. 자신의 fork 브랜치를 로컬로 가져오기 위해 원하는 위치에서 github 주소를 복사합니다. 
+![copy](https://user-images.githubusercontent.com/360685/137582290-4fc6cb93-b84f-420e-a8bc-fd33d4b06fce.png)
 
-TBD
-<br/>
+    git clone 으로 fork 한 개인 브랜치를 로컬로 다운 받습니다.
+    ```
+    ~$ git clone https://github.com/gdgand(개인Github 아이디)/ComposeFest2021.git
+    ```
 
+2. 일정 별 각 주차에 맞는 폴더 위치에서 코드랩을 진행합니다. 
+    (~/week 1,2,3,4/Compose .../XXXComposeCodelab)
+    - 각 주차 별 시작할 수 있는 코드랩 코드가 주차 별로 포함되어 있습니다. 바로 열어서 코드랩을 시작하실 수 있습니다. 
+    - 다만, 새로 프로젝트를 생성해서 시작하는 경우에는 프로젝트 추가가 필요합니다. 해당 프로젝트는 아래의 두 개 입니다.
+        1. 1주차 Jetpack Compose basics
+        2. 2주차 Layouts in Jetpack Compose  
+    ![path](https://user-images.githubusercontent.com/360685/137582567-9c6b8ebc-a1ea-4513-85e1-fe1574f40c5d.png)
+
+3. 각각의 코드랩을 진행합니다. 
+![codelab](https://user-images.githubusercontent.com/360685/137581881-0cb77eb3-3595-4462-ae86-5b09636fb3d1.png)
+
+4. 완성된 코드를 개인 fork 브랜치로 push해서 업데이트 합니다. 
+    
 ## 매주 공개되는 자료 내 fork 브랜치로 땡겨오기
 (메인 브랜치와 Sync 맞추는 방법)
 
