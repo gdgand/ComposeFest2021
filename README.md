@@ -56,6 +56,7 @@
 ![codelab](https://user-images.githubusercontent.com/360685/137581881-0cb77eb3-3595-4462-ae86-5b09636fb3d1.png)
 
 4. 완성된 코드를 개인 fork 브랜치로 push해서 업데이트 합니다. 
+5. 코드랩 수료확인을 위해 직접 진행한 코드 commit 히스토리를 꼭 남겨주세요!
     
 ## 매주 공개되는 자료 내 fork 브랜치로 땡겨오기
 (메인 브랜치와 Sync 맞추는 방법)
