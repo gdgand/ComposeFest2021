@@ -60,4 +60,35 @@
 ## 매주 공개되는 자료 내 fork 브랜치로 땡겨오기
 (메인 브랜치와 Sync 맞추는 방법)
 
-TBD
+1. 현재 fork 한 remote 브랜치 확인
+    ```
+    $ git remote -v
+    origin	https://github.com/YOUR_NAME/ComposeFest2021.git (fetch)
+    origin	https://github.com/YOUR_NAME/ComposeFest2021.git (push)
+    ```
+2. upstream 으로 gdgand 브랜치 추가하기 
+    ```
+    $ git remote add upstream https://github.com/gdgand/ComposeFest2021.git
+    ```
+3. 잘 추가되었는지 확인하기 
+    ```
+    $ git remote -v
+    origin	https://github.com/YOUR_NAME/ComposeFest2021.git (fetch)
+    origin	https://github.com/YOUR_NAME/ComposeFest2021.git (push)
+    upstream	https://github.com/gdgand/ComposeFest2021.git (fetch)
+    upstream	https://github.com/gdgand/ComposeFest2021.git (push)
+    ```
+4. 최신 업데이트 확인하기 
+    ```
+    $ git fetch upstream 
+    remote: Enumerating objects: 706, done.
+    .. 이하 생략
+    ```
+5. 내 remote fork 브랜치와 머지하기 
+    ```
+    $ git merge upstream/main
+    ```
+6. 변경사항 push 하기 
+    ```
+    $ git push origin main
+    ```
