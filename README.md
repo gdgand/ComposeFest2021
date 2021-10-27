@@ -63,6 +63,7 @@
 ## 매주 공개되는 자료를 최신화 하기 - GUI로 사용하는 방법
 
 자신의 GitHub에서 Fetch upstream 버튼을 찾아 눌러주세요. 최신화가 필요하다면 Fetch and merge 초록색 버튼을 눌러주면 최신화를 할 수 있습니다.
+(만약 'This branch is X commits behind gdgand:main.'와 같은 메시지가 보이는데 초록색 버튼이 disable 상태라면 새로고침을 눌러주고, Fetch를 눌러주세요.)
 
 ![images/git-fetch-and-merge](images/git-fetch-and-merge.png)
 
