@@ -40,12 +40,16 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.codelab.basics.ui.BasicsCodelabTheme
+import com.codelab.basics.ui.Blue
+import com.codelab.basics.ui.LightBlue
+import com.codelab.basics.ui.Navy
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -100,23 +104,11 @@ private fun Greetings(names: List<String> = List(1000) { "$it" } ) {
 
 @Composable
 private fun Greeting(name: String) {
-    val expanded = remember { mutableStateOf(false) }
-    val extraPadding by animateDpAsState(if (expanded.value) 48.dp else 0.dp)
-
-    Surface(color = MaterialTheme.colors.primary) {
-        Row(modifier = Modifier.padding(24.dp)) {
-            Column(modifier = Modifier
-                .weight(1f)
-                .padding(bottom = extraPadding)) {
-                Text(text = "Hello, ")
-                Text(text = name)
-            }
-            OutlinedButton(
-                onClick = {  expanded.value = !expanded.value }
-            ){
-                Text(if (expanded.value) "Show less" else "Show more")
-            }
-        }
+    Card(
+        backgroundColor = MaterialTheme.colors.primary,
+        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+    ) {
+        CardContent(name)
     }
 }
 
