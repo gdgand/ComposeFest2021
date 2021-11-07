@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BasicsCodelabTheme {
-                Greeting("Android")
+                MyApp()
             }
         }
     }
@@ -67,12 +67,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun MyApp() {
-    var shouldShowOnboarding by rememberSaveable { mutableStateOf(true) }
-
-    if (shouldShowOnboarding) {
-        OnboardingScreen(onContinueClicked = { shouldShowOnboarding = false })
-    } else {
-        Greetings()
+    Surface(color = MaterialTheme.colors.background) {
+        Greeting("Android")
     }
 }
 
@@ -168,7 +164,7 @@ private fun CardContent(name: String) {
 @Composable
 fun DefaultPreview() {
     BasicsCodelabTheme {
-        Greetings()
+        MyApp()
     }
 }
 
