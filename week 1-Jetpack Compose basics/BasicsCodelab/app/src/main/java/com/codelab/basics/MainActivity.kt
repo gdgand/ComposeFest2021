@@ -59,9 +59,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BasicsCodelabTheme {
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+                Greeting("Android")
             }
         }
     }
@@ -108,7 +106,9 @@ private fun Greetings(names: List<String> = List(1000) { "$it" } ) {
 
 @Composable
 private fun Greeting(name: String) {
-    Text(text = "Hello $name")
+    Surface(color = MaterialTheme.colors.primary) {
+        Text(text = "Hello $name", modifier = Modifier.padding(24.dp))
+    }
 }
 
 @Composable
