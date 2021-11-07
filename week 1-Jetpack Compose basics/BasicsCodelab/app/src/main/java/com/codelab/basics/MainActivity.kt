@@ -23,6 +23,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -100,7 +101,7 @@ private fun Greetings(names: List<String> = List(1000) { "$it" } ) {
 @Composable
 private fun Greeting(name: String) {
     val expanded = remember { mutableStateOf(false) }
-    val extraPadding = if (expanded.value) 48.dp else 0.dp
+    val extraPadding by animateDpAsState(if (expanded.value) 48.dp else 0.dp)
 
     Surface(color = MaterialTheme.colors.primary) {
         Row(modifier = Modifier.padding(24.dp)) {
