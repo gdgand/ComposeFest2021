@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MyBasicsCodelab" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.MyBasicsCodelab.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyBasicsCodelab.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyBasicsCodelab.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
