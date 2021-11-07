@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp() {
-    var shouldShowOnBoarding by remember { mutableStateOf(true) }
+    var shouldShowOnBoarding by rememberSaveable { mutableStateOf(true) }
 
     if (shouldShowOnBoarding) {
         OnBoardingScreen(onContinueClicked = { shouldShowOnBoarding = false })
@@ -79,8 +80,8 @@ fun GreetingsPreview() {
 @Composable
 fun Greeting(name: String) {
     // if expanded state is changed, will be recomposed
-    // btw state won't be preserved when config changed
-    val expanded = remember { mutableStateOf(false) }
+    // btw just remember won't be preserved when config changed, but rememberSaveable do
+    val expanded = rememberSaveable { mutableStateOf(false) }
     val extraPadding = if (expanded.value) 48.dp else 0.dp
     Surface(
         color = MaterialTheme.colors.primary, modifier = Modifier.padding(
