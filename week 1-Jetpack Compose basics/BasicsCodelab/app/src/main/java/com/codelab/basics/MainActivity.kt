@@ -59,7 +59,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BasicsCodelabTheme {
-                MyApp()
+                Surface(color = MaterialTheme.colors.background) {
+                    Greeting("Android")
+                }
             }
         }
     }
@@ -106,12 +108,7 @@ private fun Greetings(names: List<String> = List(1000) { "$it" } ) {
 
 @Composable
 private fun Greeting(name: String) {
-    Card(
-        backgroundColor = MaterialTheme.colors.primary,
-        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
-    ) {
-        CardContent(name)
-    }
+    Text(text = "Hello $name")
 }
 
 @Composable
@@ -167,7 +164,7 @@ private fun CardContent(name: String) {
     uiMode = UI_MODE_NIGHT_YES,
     name = "DefaultPreviewDark"
 )
-@Preview(showBackground = true, widthDp = 320)
+@Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     BasicsCodelabTheme {
