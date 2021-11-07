@@ -59,13 +59,16 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
+    var shouldShowOnboarding by remember { mutableStateOf(true) }
+    if(shouldShowOnboarding) {
+        OnboardingScreen { shouldShowOnboarding = false }
+    } else {
         Greetings()
     }
 }
 
 @Composable
-private fun OnboardingScreen(onContinueClicked: () -> Unit) {
+private fun OnboardingScreen(onClick: ()->Unit) {
     Surface {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -75,7 +78,7 @@ private fun OnboardingScreen(onContinueClicked: () -> Unit) {
             Text("Welcome to the Basics Codelab!")
             Button(
                 modifier = Modifier.padding(vertical = 24.dp),
-                onClick = onContinueClicked
+                onClick = onClick
             ) {
                 Text("Continue")
             }
@@ -85,27 +88,32 @@ private fun OnboardingScreen(onContinueClicked: () -> Unit) {
 
 @Composable
 private fun Greetings(names: List<String> = listOf("World", "Compose", "Android") ) {
-    Column(modifier = Modifier.padding(vertical = 4.dp)) {
-        names.forEach {
-            Greeting(it)
+    Surface(color = MaterialTheme.colors.background) {
+        Column(modifier = Modifier.padding(vertical = 4.dp)) {
+            names.forEach {
+                Greeting(it)
+            }
         }
     }
 }
 
 @Composable
 private fun Greeting(name: String) {
-    val context = LocalContext.current // 꼭 밖에서 해야하는 가...?
+    val expanded = remember { mutableStateOf(false) }
+    val extraPadding = if (expanded.value) 48.dp else 0.dp
+
     Surface(color = MaterialTheme.colors.primary) {
         Row(modifier = Modifier.padding(24.dp)) {
-            Column(modifier = Modifier.weight(1f)) {
+            Column(modifier = Modifier
+                .weight(1f)
+                .padding(bottom = extraPadding)) {
                 Text(text = "Hello, ")
                 Text(text = name)
             }
             OutlinedButton(
-                onClick = {
-                    Toast.makeText(context, "Hello, $name", Toast.LENGTH_SHORT).show() }
-            ) {
-                Text("Show more")
+                onClick = {  expanded.value = !expanded.value }
+            ){
+                Text(if (expanded.value) "Show less" else "Show more")
             }
         }
     }
@@ -168,7 +176,7 @@ private fun CardContent(name: String) {
 @Composable
 fun DefaultPreview() {
     BasicsCodelabTheme {
-        MyApp()
+        Greetings()
     }
 }
 
@@ -176,6 +184,8 @@ fun DefaultPreview() {
 @Composable
 fun OnboardingPreview() {
     BasicsCodelabTheme {
-        OnboardingScreen(onContinueClicked = {})
+        OnboardingScreen{
+            //do nothing.
+        }
     }
 }
