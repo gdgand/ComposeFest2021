@@ -87,10 +87,10 @@ private fun OnboardingScreen(onClick: ()->Unit) {
 }
 
 @Composable
-private fun Greetings(names: List<String> = listOf("World", "Compose", "Android") ) {
+private fun Greetings(names: List<String> = List(1000) { "$it" } ) {
     Surface(color = MaterialTheme.colors.background) {
-        Column(modifier = Modifier.padding(vertical = 4.dp)) {
-            names.forEach {
+        LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
+            items(items = names) {
                 Greeting(it)
             }
         }
