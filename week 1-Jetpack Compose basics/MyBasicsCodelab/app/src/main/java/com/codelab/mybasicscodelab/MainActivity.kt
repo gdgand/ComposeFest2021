@@ -11,10 +11,14 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -89,9 +93,9 @@ fun GreetingsPreview() {
 fun Greeting(name: String) {
     // if expanded state is changed, will be recomposed
     // btw just remember won't be preserved when config changed, but rememberSaveable do
-    val expanded = rememberSaveable { mutableStateOf(false) }
+    var expanded by rememberSaveable { mutableStateOf(false) }
     val extraPadding by animateDpAsState(
-        targetValue = if (expanded.value) 48.dp else 0.dp,
+        targetValue = if (expanded) 48.dp else 0.dp,
         animationSpec = spring(
             dampingRatio = Spring.DampingRatioMediumBouncy,
             stiffness = Spring.StiffnessLow
@@ -118,9 +122,22 @@ fun Greeting(name: String) {
                         FontWeight.Bold
                     )
                 )
+                if (expanded) {
+                    Text(
+                        text = ("Composem ipsum color sit lazy, " +
+                                "padding theme elit, sed do bouncy. ").repeat(4)
+                    )
+                }
             }
-            OutlinedButton(onClick = { expanded.value = !expanded.value }) {
-                Text(text = if (expanded.value) "Show less" else "Show more")
+            IconButton(onClick = { expanded = !expanded }) {
+                Icon(
+                    imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+                    contentDescription = if (expanded) {
+                        stringResource(R.string.show_less)
+                    } else {
+                        stringResource(R.string.show_more)
+                    }
+                )
             }
         }
     }
