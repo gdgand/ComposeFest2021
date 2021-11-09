@@ -2,6 +2,14 @@
 Using state in Jetpack Compose 본 폴더를 Android Studio를 이용해서 열어주세요.
 작업을 완료하고, push 해주세요.
 
+1. 영상 보러가기
+
+    [![Video Label](https://img.youtube.com/vi/XXKmlKolcPk/0.jpg)](https://youtu.be/XXKmlKolcPk)
+
+2. 슬라이드 자료 보러가기 👉 [링크](https://speakerdeck.com/veronikapj/2021-composefest2021-using-state-in-jetpack-compose)
+
+
+<br/><br/>
 # Using State in Jetpack Compose Codelab
 
 This folder contains the source code for the [Using State in Jetpack Compose codelab](https://developer.android.com/codelabs/jetpack-compose-state).
