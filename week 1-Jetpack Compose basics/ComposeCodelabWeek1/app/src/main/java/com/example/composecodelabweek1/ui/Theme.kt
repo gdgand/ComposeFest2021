@@ -22,6 +22,7 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import com.example.composecodelabweek1.ui.typography
 
 private val DarkColorPalette = darkColors(
     surface = Blue,
