@@ -19,14 +19,18 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester.Companion.createRefs
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.*
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import coil.compose.rememberImagePainter
 import js.pekah.codelab_week2.ui.theme.Codelab_week2Theme
+import kotlinx.coroutines.NonDisposableHandle.parent
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -134,6 +138,71 @@ fun BodyContent(modifier: Modifier = Modifier) {
 fun LayoutsCodelabPreview() {
     Codelab_week2Theme {
         BodyContent()
+    }
+}
+
+@Composable
+fun ConstraintLayoutContent() {
+    ConstraintLayout {
+
+        val (button1, button2, text) = createRefs()
+
+        Button(
+            onClick = { /* Do something */ },
+            modifier = Modifier.constrainAs(button1) {
+                top.linkTo(parent.top, margin = 16.dp)
+            }
+        ) {
+            Text("Button 1")
+        }
+
+        Text("Text", Modifier.constrainAs(text) {
+            top.linkTo(button1.bottom, margin = 16.dp)
+            centerAround(button1.end)
+        })
+
+        val barrier = createEndBarrier(button1, text)
+        Button(
+            onClick = { /* Do something */ },
+            modifier = Modifier.constrainAs(button2) {
+                top.linkTo(parent.top, margin = 16.dp)
+                start.linkTo(barrier)
+            }
+        ) {
+            Text("Button 2")
+        }
+    }
+}
+
+@Composable
+fun LargeConstraintLayout() {
+    ConstraintLayout {
+        val text = createRef()
+
+        val guideline = createGuidelineFromStart(0.5f)
+        Text(
+            "This is a very very very very very very very long text",
+            Modifier.constrainAs(text) {
+                linkTo(guideline, parent.end)
+                width = Dimension.preferredWrapContent
+            }
+        )
+    }
+}
+
+@Preview
+@Composable
+fun LargeConstraintLayoutPreview() {
+    Codelab_week2Theme {
+        LargeConstraintLayout()
+    }
+}
+
+@Preview
+@Composable
+fun ConstraintLayoutContentPreview() {
+    Codelab_week2Theme {
+        ConstraintLayoutContent()
     }
 }
 
