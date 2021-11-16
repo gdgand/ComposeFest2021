@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.compose.runtime:runtime-livedata:1.0.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6e47975be888769ca5cd22986b8a9696/transformed/jetified-runtime-livedata-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e47975be888769ca5cd22986b8a9696/transformed/jetified-runtime-livedata-1.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e47975be888769ca5cd22986b8a9696/transformed/jetified-runtime-livedata-1.0.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-livedata/1.0.4/a36eb1d628eb1d76e540e9357a1330ade67e328c/runtime-livedata-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
