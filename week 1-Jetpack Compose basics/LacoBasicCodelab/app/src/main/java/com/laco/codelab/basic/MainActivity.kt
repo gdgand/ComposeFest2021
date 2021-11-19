@@ -3,7 +3,6 @@ package com.laco.codelab.basic
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -19,12 +18,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LacoBasicCodelabTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+                MyApp()
             }
         }
+    }
+}
+
+@Composable
+private fun MyApp() {
+    Surface(color = MaterialTheme.colors.primary) {
+        Greeting("Android")
     }
 }
 
@@ -39,6 +42,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     LacoBasicCodelabTheme {
-        Greeting("Android")
+        MyApp()
     }
 }
