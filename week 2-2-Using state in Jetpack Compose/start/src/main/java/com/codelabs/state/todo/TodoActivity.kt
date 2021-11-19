@@ -45,10 +45,14 @@ class TodoActivity : AppCompatActivity() {
 // viewModel에 저장된 상태와 TodoScreen 컴포저블 사이의 다리 역할을 하는 컴포저블
 @Composable
 fun TodoActivityScreen(todoViewModel: TodoViewModel){
-    val items :List<TodoItem> by todoViewModel.todoItems.observeAsState(listOf())
+
     TodoScreen(
-        items = items,
-        onAddItem = {todoViewModel.addItem(it)},
-        onRemoveItem = {todoViewModel.removeItem(it)}
+        items = todoViewModel.todoItems,
+        currentlyEditing= todoViewModel.currentEditItem,
+        onAddItem = todoViewModel::addItem,
+        onRemoveItem = todoViewModel::removeItem,
+        onEditDone = todoViewModel::onEditDone,
+        onStartEdit = todoViewModel::onItemSelected,
+        onEditItemChange = todoViewModel::onEditItemChange,
     )
 }
