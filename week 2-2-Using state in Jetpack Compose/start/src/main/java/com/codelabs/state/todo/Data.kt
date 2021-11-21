@@ -29,7 +29,7 @@ import java.util.UUID
 
 data class TodoItem(
     val task: String,
-    val icon: TodoIcon = TodoIcon.Default,
+    var icon: TodoIcon = TodoIcon.Default,
     // since the user may generate identical tasks, give them each a unique ID
     val id: UUID = UUID.randomUUID()
 )

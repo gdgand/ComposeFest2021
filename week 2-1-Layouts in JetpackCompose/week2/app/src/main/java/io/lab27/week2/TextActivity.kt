@@ -1,38 +1,25 @@
 package io.lab27.week2
 
-import android.R.attr
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.*
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
-import coil.compose.rememberImagePainter
-import io.lab27.week2.ui.theme.Week2Theme
-import kotlinx.coroutines.launch
-import android.R.attr.x
-import android.util.Log
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.toSize
+import coil.compose.rememberImagePainter
+import io.lab27.week2.ui.theme.Week2Theme
 
 
 class TestActivity : ComponentActivity() {
@@ -71,15 +58,19 @@ fun LayoutsCodelab2() {
 fun BodyContent2(modifier: Modifier = Modifier) {
 //    BoxWithConstraintsDemo()
     Row(modifier = modifier) {
-        Test(modifier
-            .wrapContentHeight()
-            .width(150.dp)
-            .padding(10.dp), text = "가나다라마바사")
-        Test(modifier
-            .wrapContentHeight()
-            .width(150.dp)
-            .padding(10.dp),
-            text = "가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사")
+        Test(
+            modifier
+                .wrapContentHeight()
+                .width(150.dp)
+                .padding(10.dp), text = "가나다라마바사"
+        )
+        Test(
+            modifier
+                .wrapContentHeight()
+                .width(150.dp)
+                .padding(10.dp),
+            text = "가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사"
+        )
     }
 }
 
@@ -87,12 +78,12 @@ fun BodyContent2(modifier: Modifier = Modifier) {
 @Composable
 fun Test(modifier: Modifier = Modifier, text: String) {
     var currentHeight by remember { mutableStateOf(Size.Zero) }
-    val extraPadding = when {
-        currentHeight.height > 300 -> 100.dp
-        else -> 20.dp
-    }
 
     Card(modifier = modifier, shape = RoundedCornerShape(20.dp)) {
+        val extraPadding = when {
+            currentHeight.height > 300 -> 100.dp
+            else -> 20.dp
+        }
 
         Column(modifier = Modifier.padding(10.dp)) {
             Image(
@@ -105,10 +96,7 @@ fun Test(modifier: Modifier = Modifier, text: String) {
             Text(text = text,
                 modifier = Modifier
                     .padding(bottom = extraPadding)
-                    .onGloballyPositioned {
-                        currentHeight = it.size.toSize()
-                        Log.d("currentTextHeight", "${currentHeight.height}")
-                    })
+                    .onGloballyPositioned { textArea -> currentHeight = textArea.size.toSize() })
         }
     }
 
