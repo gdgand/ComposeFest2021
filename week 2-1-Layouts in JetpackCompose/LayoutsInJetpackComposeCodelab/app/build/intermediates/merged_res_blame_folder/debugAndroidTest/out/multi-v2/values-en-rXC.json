@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/Samsung_T5/Android/ComposeFest2021/week 2-1-Layouts in JetpackCompose/LayoutsInJetpackComposeCodelab/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-en-rXC/values-en-rXC.xml",
+            "map": [
+                {
+                    "source": "/Users/hyunhyejin/.gradle/caches/transforms-3/acb209d88ce91ed7fb4d20f7c42190d1/transformed/core-1.7.0/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "203",
+                        "endOffsets": "254"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "1940",
+                        "endColumns": "203",
+                        "endOffsets": "2139"
+                    }
+                },
+                {
+                    "source": "/Users/hyunhyejin/.gradle/caches/transforms-3/ff71aeb3000d5ef3647cce4fa4afc923/transformed/jetified-ui-1.0.1/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,296,481,678,863,1067,1255,1442,1607,1774,1940,2107",
+                        "endColumns": "190,184,196,184,203,187,186,164,166,165,166,237",
+                        "endOffsets": "291,476,673,858,1062,1250,1437,1602,1769,1935,2102,2340"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,296,481,678,863,1067,1255,1442,1607,1774,2144,2311",
+                        "endColumns": "190,184,196,184,203,187,186,164,166,165,166,237",
+                        "endOffsets": "291,476,673,858,1062,1250,1437,1602,1769,1935,2306,2544"
+                    }
+                }
+            ]
+        }
+    ]
+}

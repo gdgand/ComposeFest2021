@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/Samsung_T5/Android/ComposeFest2021/week 2-1-Layouts in JetpackCompose/LayoutsInJetpackComposeCodelab/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-it/values-it.xml",
+            "map": [
+                {
+                    "source": "/Users/hyunhyejin/.gradle/caches/transforms-3/ff71aeb3000d5ef3647cce4fa4afc923/transformed/jetified-ui-1.0.1/res/values-it/values-it.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,205,292,390,469,594,687,782,847,911,996,1065",
+                        "endColumns": "99,86,97,78,124,92,94,64,63,84,68,120",
+                        "endOffsets": "200,287,385,464,589,682,777,842,906,991,1060,1181"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,205,292,390,469,594,687,782,847,911,1097,1166",
+                        "endColumns": "99,86,97,78,124,92,94,64,63,84,68,120",
+                        "endOffsets": "200,287,385,464,589,682,777,842,906,991,1161,1282"
+                    }
+                },
+                {
+                    "source": "/Users/hyunhyejin/.gradle/caches/transforms-3/acb209d88ce91ed7fb4d20f7c42190d1/transformed/core-1.7.0/res/values-it/values-it.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "996",
+                        "endColumns": "100",
+                        "endOffsets": "1092"
+                    }
+                }
+            ]
+        }
+    ]
+}
