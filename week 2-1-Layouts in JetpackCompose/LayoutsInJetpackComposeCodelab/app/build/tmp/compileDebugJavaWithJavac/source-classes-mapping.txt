@@ -1,2 +1,0 @@
-com/example/layoutsinjetpackcomposecodelab/BuildConfig.java
- com.example.layoutsinjetpackcomposecodelab.BuildConfig
