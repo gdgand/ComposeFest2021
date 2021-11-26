@@ -105,4 +105,7 @@ dependencies {
     androidTestImplementation "com.google.truth:truth:$rootProject.truthVersion"
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$rootProject.composeVersion"
     testImplementation "junit:junit:$rootProject.junitVersion"
+
+    implementation "com.google.android.material:compose-theme-adapter:$rootProject.composeVersion"
+
 }
