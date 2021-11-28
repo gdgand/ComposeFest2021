@@ -16,7 +16,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.AlignmentLine
+import androidx.compose.ui.layout.FirstBaseline
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.codelab.layoutcodelab.ui.theme.LayoutCodelabTheme
@@ -56,6 +60,37 @@ fun BodyContent(modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
         Text(text = "Hi there!")
         Text(text = "Thanks for going through the Layouts codelab")
+    }
+}
+
+fun Modifier.firstBaselineToTop(firstBaseLineToTop: Dp) = this.then(
+    layout { measurements, constraints ->
+        val placeable = measurements.measure(constraints)
+
+        check(placeable[FirstBaseline] != AlignmentLine.Unspecified)
+        val firstBaseLine = placeable[FirstBaseline]
+
+        val placeableY = firstBaseLineToTop.roundToPx() - firstBaseLine
+        val height = placeable.height + placeableY
+        layout(placeable.width, height) {
+            placeable.placeRelative(0, placeableY)
+        }
+    }
+)
+
+@Preview
+@Composable
+fun TextWithPaddingToBaselinePreview() {
+    LayoutCodelabTheme {
+        Text("Hi there!", Modifier.firstBaselineToTop(32.dp))
+    }
+}
+
+@Preview
+@Composable
+fun TextWithNormalPaddingPreview() {
+    LayoutCodelabTheme {
+        Text("Hi there!", Modifier.padding(top = 32.dp))
     }
 }
 
