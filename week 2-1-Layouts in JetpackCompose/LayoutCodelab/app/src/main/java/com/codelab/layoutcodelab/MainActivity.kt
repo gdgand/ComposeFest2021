@@ -32,14 +32,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LayoutCodelabTheme {
-                LayoutsCodelab()
+                LayoutCodelab()
             }
         }
     }
 }
 
 @Composable
-fun LayoutsCodelab() {
+fun LayoutCodelab() {
     Scaffold(topBar = {
         TopAppBar(
             title = {
@@ -127,9 +127,9 @@ fun TextWithNormalPaddingPreview() {
 
 @Preview
 @Composable
-fun LayoutsCodelabPreview() {
+fun LayoutCodelabPreview() {
     LayoutCodelabTheme {
-        LayoutsCodelab()
+        LayoutCodelab()
     }
 }
 
