@@ -64,7 +64,13 @@ private val topics = listOf(
 
 @Composable
 fun BodyContent(modifier: Modifier = Modifier) {
-    Row(modifier = modifier.horizontalScroll(rememberScrollState())) {
+    Row(
+        modifier = modifier
+            .background(color = Color.LightGray)
+            .padding(16.dp)
+            .size(200.dp)
+            .horizontalScroll(rememberScrollState())
+    ) {
         StaggeredGrid {
             topics.forEach { Chip(modifier = Modifier.padding(8.dp), text = it) }
         }
