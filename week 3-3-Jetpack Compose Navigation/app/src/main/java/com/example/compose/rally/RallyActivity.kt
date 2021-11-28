@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
@@ -72,52 +73,60 @@ fun RallyApp() {
                 )
             }
         ) { innerPadding ->
-            NavHost(
-                navController = navController,
-                startDestination = RallyScreen.Overview.name,
-                modifier = Modifier.padding(innerPadding)
+            RallyNavHost(navController = navController, innerPadding = innerPadding)
+        }
+    }
+}
 
-            ) {
-                composable(RallyScreen.Overview.name) {
-                    OverviewBody(
-                        onClickSeeAllAccounts = { navController.navigate(RallyScreen.Accounts.name) },
-                        onClickSeeAllBills = { navController.navigate(RallyScreen.Bills.name) },
-                        onAccountClick = { name ->
-                            navController.navigate("${RallyScreen.Accounts.name}/$name/testaaa")
-                        },
-                    )
-                }
-                composable(RallyScreen.Accounts.name) {
-                    AccountsBody(accounts = UserData.accounts)
-                }
-                composable(RallyScreen.Bills.name) {
-                    BillsBody(bills = UserData.bills)
-                }
+@Composable
+fun RallyNavHost(
+    navController: NavHostController,
+    innerPadding: PaddingValues
+) {
+    NavHost(
+        navController = navController,
+        startDestination = RallyScreen.Overview.name,
+        modifier = Modifier.padding(innerPadding)
+
+    ) {
+        composable(RallyScreen.Overview.name) {
+            OverviewBody(
+                onClickSeeAllAccounts = { navController.navigate(RallyScreen.Accounts.name) },
+                onClickSeeAllBills = { navController.navigate(RallyScreen.Bills.name) },
+                onAccountClick = { name ->
+                    navController.navigate("${RallyScreen.Accounts.name}/$name/testaaa")
+                },
+            )
+        }
+        composable(RallyScreen.Accounts.name) {
+            AccountsBody(accounts = UserData.accounts)
+        }
+        composable(RallyScreen.Bills.name) {
+            BillsBody(bills = UserData.bills)
+        }
 //                val accountsName = RallyScreen.Accounts.name
 
-                composable(
-                    route = "${RallyScreen.Accounts.name}/{name}/{name2}",
-                    arguments = listOf(
-                        navArgument("name") {
-                            // Make argument type safe
-                            type = NavType.StringType
-                        },
-                        navArgument("name2") {
-                            // Make argument type safe
-                            type = NavType.StringType
-                        },
+        composable(
+            route = "${RallyScreen.Accounts.name}/{name}/{name2}",
+            arguments = listOf(
+                navArgument("name") {
+                    // Make argument type safe
+                    type = NavType.StringType
+                },
+                navArgument("name2") {
+                    // Make argument type safe
+                    type = NavType.StringType
+                },
 
-                    )
-                ) { entry -> // Look up "name" in NavBackStackEntry's arguments
-                    val accountName = entry.arguments?.getString("name")
-                    val accountName2 = entry.arguments?.getString("name2")
-                    Log.i("Aas", "$accountName2")
-                    // Find first name match in UserData
-                    val account = UserData.getAccount(accountName)
-                    // Pass account to SingleAccountBody
-                    SingleAccountBody(account = account)
-                }
-            }
+                )
+        ) { entry -> // Look up "name" in NavBackStackEntry's arguments
+            val accountName = entry.arguments?.getString("name")
+            val accountName2 = entry.arguments?.getString("name2")
+            Log.i("Aas", "$accountName2")
+            // Find first name match in UserData
+            val account = UserData.getAccount(accountName)
+            // Pass account to SingleAccountBody
+            SingleAccountBody(account = account)
         }
     }
 }
