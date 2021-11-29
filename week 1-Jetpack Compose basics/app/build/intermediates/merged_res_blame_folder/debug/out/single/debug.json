@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\drawable_profile_picture.png.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\drawable\\profile_picture.png"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\duswn\\ComposeFest2021\\week 1-Jetpack Compose basics\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    }
+]

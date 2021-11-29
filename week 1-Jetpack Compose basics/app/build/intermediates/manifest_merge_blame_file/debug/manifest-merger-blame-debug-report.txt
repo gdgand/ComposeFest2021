@@ -1,0 +1,95 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.codelab.basicscodelab01"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:5:5-23:19
+12        android:allowBackup="true"
+12-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\duswn\.gradle\caches\transforms-3\acb209d88ce91ed7fb4d20f7c42190d1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:7:9-43
+16        android:label="@string/app_name"
+16-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:9:9-54
+18        android:supportsRtl="true"
+18-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:10:9-35
+19        android:theme="@style/Theme.BasicsCodelab01" >
+19-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:11:9-53
+20        <activity
+20-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:12:9-22:20
+21            android:name="com.codelab.basicscodelab01.MainActivity"
+21-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:13:13-41
+22            android:exported="true"
+22-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:14:13-36
+23            android:label="@string/app_name"
+23-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:15:13-45
+24            android:theme="@style/Theme.BasicsCodelab01.NoActionBar" >
+24-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:16:13-69
+25            <intent-filter>
+25-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:17:13-21:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:18:17-69
+26-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:18:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:20:17-77
+28-->C:\Users\duswn\ComposeFest2021\week 1-Jetpack Compose basics\app\src\main\AndroidManifest.xml:20:27-74
+29            </intent-filter>
+30        </activity>
+31        <activity
+31-->[androidx.compose.ui:ui-tooling:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\d3d1863f5e1a6bd5ba5355a0256021a3\transformed\jetified-ui-tooling-1.0.1\AndroidManifest.xml:25:9-27:39
+32            android:name="androidx.compose.ui.tooling.PreviewActivity"
+32-->[androidx.compose.ui:ui-tooling:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\d3d1863f5e1a6bd5ba5355a0256021a3\transformed\jetified-ui-tooling-1.0.1\AndroidManifest.xml:26:13-71
+33            android:exported="true" />
+33-->[androidx.compose.ui:ui-tooling:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\d3d1863f5e1a6bd5ba5355a0256021a3\transformed\jetified-ui-tooling-1.0.1\AndroidManifest.xml:27:13-36
+34
+35        <provider
+35-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:26:9-34:20
+36            android:name="androidx.startup.InitializationProvider"
+36-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:27:13-67
+37            android:authorities="com.codelab.basicscodelab01.androidx-startup"
+37-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:28:13-68
+38            android:exported="false" >
+38-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:29:13-37
+39            <meta-data
+39-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:31:13-33:52
+40                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+40-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:32:17-85
+41                android:value="androidx.startup" />
+41-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:33:17-49
+42        </provider>
+43
+44        <receiver
+44-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:36:9-45:20
+45            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+45-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:37:13-76
+46            android:directBootAware="false"
+46-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:38:13-44
+47            android:enabled="true"
+47-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:39:13-35
+48            android:exported="true"
+48-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:40:13-36
+49            android:permission="android.permission.DUMP" >
+49-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:41:13-57
+50            <intent-filter>
+50-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:42:13-44:29
+51                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+51-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:43:17-91
+51-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\duswn\.gradle\caches\transforms-3\40f6739bfc4a398d8df81a090f2e9ab2\transformed\jetified-profileinstaller-1.0.1\AndroidManifest.xml:43:25-88
+52            </intent-filter>
+53        </receiver>
+54    </application>
+55
+56</manifest>
