@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StateCodelab.iml" filepath="$PROJECT_DIR$/.idea/modules/StateCodelab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/finished/StateCodelab.finished.iml" filepath="$PROJECT_DIR$/.idea/modules/finished/StateCodelab.finished.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/start/StateCodelab.start.iml" filepath="$PROJECT_DIR$/.idea/modules/start/StateCodelab.start.iml" />
+    </modules>
+  </component>
+</project>
