@@ -49,7 +49,7 @@ class TodoActivity : AppCompatActivity() {
             onAddItem = todoViewModel::addItem,
             onRemoveItem = todoViewModel::removeItem,
             onStartEdit = todoViewModel::onEditItemSelected,
-            onEditItemChange = todoViewModel::onEditItemSelected,
+            onEditItemChange = todoViewModel::onEditItemChange,
             onEditDone = todoViewModel::onEditDone
         )
     }
