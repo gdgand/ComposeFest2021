@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66dc80dd-c05c-4e4d-9e87-ae2331ae18b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/start/src/main/java/com/example/android/codelab/animation/ui/home/Home.kt" beforeDir="false" afterPath="$PROJECT_DIR$/start/src/main/java/com/example/android/codelab/animation/ui/home/Home.kt" afterDir="false" />
-    </list>
+    <list default="true" id="66dc80dd-c05c-4e4d-9e87-ae2331ae18b5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
