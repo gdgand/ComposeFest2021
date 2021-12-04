@@ -115,7 +115,7 @@ fun RallyNavHost(navController: NavHostController, modifier: Modifier = Modifier
                 }
             ),
             deepLinks = listOf(navDeepLink {
-                uriPattern = "rally://${RallyScreen.Accounts.name}$/{name}"
+                uriPattern = "rally://${RallyScreen.Accounts.name}/{name}"
             })
         ) { entry -> // Look up "name" in NavBackStackEntry's arguments
             val accountName = entry.arguments?.getString("name")
