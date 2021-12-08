@@ -52,4 +52,5 @@ enum class RallyScreen(
     fun content(onScreenChange: (RallyScreen) -> Unit) {
         body(onScreenChange)
     }
+
 }
