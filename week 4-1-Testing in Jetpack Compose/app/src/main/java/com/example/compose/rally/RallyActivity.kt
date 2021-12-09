@@ -39,27 +39,30 @@ class RallyActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            RallyApp()
+            var currentScreen:RallyScreen by rememberSaveable { mutableStateOf(RallyScreen.Overview) }
+            RallyApp(currentScreen){
+                    screen-> currentScreen = screen
+            }
         }
     }
 }
 
 @Composable
-fun RallyApp() {
+fun RallyApp(currentScreen:RallyScreen, onTabSelected: (RallyScreen) -> Unit) {
     RallyTheme {
         val allScreens = RallyScreen.values().toList()
-        var currentScreen by rememberSaveable { mutableStateOf(RallyScreen.Overview) }
+
         Scaffold(
             topBar = {
                 RallyTopAppBar(
                     allScreens = allScreens,
-                    onTabSelected = { screen -> currentScreen = screen },
+                    onTabSelected = onTabSelected,
                     currentScreen = currentScreen
                 )
             }
         ) { innerPadding ->
             Box(Modifier.padding(innerPadding)) {
-                currentScreen.content(onScreenChange = { screen -> currentScreen = screen })
+                currentScreen.content(onScreenChange = onTabSelected)
             }
         }
     }
