@@ -1,5 +1,10 @@
 # ComposeFest2021
+
 Week1 Jetpack Compose Basic 코드랩은 새 프로젝트를 만드는 것으로 시작합니다.
+
+## 영상 보러가기 
+[![Video Label](https://img.youtube.com/vi/eN0vjXBoJMI/0.jpg)](https://youtu.be/eN0vjXBoJMI)
+
 
 ## 작업 전 필수 확인
 Basics에 올려둔 코드는 테마 관련 코드 확인용입니다.

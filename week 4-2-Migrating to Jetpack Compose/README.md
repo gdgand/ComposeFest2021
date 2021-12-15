@@ -3,6 +3,13 @@
 본 폴더를 Android Studio를 이용해서 열어주세요.
 작업을 완료하고, push 해주세요.
 
+## 영상 보러가기 
+
+슬라이드 자료 보러가기 👉 [링크](https://speakerdeck.com/veronikapj/2021-composefest2021-migration-to-jetpack-compose)
+
+[![Video Label](https://img.youtube.com/vi/8o5vg66CD8E/0.jpg)](https://youtu.be/8o5vg66CD8E)
+
+
 # Migrating to Jetpack Compose
 
 This folder contains the source code for the [Migrating to Jetpack Compose codelab](https://developer.android.com/codelabs/jetpack-compose-migration).
