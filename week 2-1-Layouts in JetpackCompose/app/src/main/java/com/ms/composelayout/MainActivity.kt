@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun PhotographCard() {
     Row (
-        modifier = Modifier.padding(16.dp).clickable {  }){
+        modifier = Modifier.clickable {  }.padding(16.dp)){
         Surface(
             modifier = Modifier.size(50.dp),
             shape = CircleShape,
