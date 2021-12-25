@@ -37,7 +37,11 @@ class MainActivity : ComponentActivity() {
 fun ComposeLayout() {
     Scaffold(
         topBar = {
-            Text(text = "ComposeLayout", style = MaterialTheme.typography.h3)
+            TopAppBar(
+                title = {
+                    Text(text = "ComposeLayout")
+                }
+            )
         }
     ) { innerPadding ->
         BodyContent(Modifier.padding(innerPadding))
