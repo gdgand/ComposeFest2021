@@ -3,6 +3,7 @@ package com.ms.composelayout
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -31,7 +32,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PhotographCard() {
-    Row {
+    Row (
+        modifier = Modifier.padding(16.dp).clickable {  }){
         Surface(
             modifier = Modifier.size(50.dp),
             shape = CircleShape,
