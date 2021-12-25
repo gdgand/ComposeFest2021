@@ -27,8 +27,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeLayoutTheme {
-                PhotographCard()
+                ComposeLayout()
             }
+        }
+    }
+}
+
+@Composable
+fun ComposeLayout() {
+    Scaffold { innerPadding ->
+        Column(modifier = Modifier.padding(innerPadding)) {
+            Text(text = "Hi there!")
+            Text(text = "Thanks for going through the Layouts codelab")
         }
     }
 }
@@ -36,7 +46,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun PhotographCard() {
     Row (
-        modifier = Modifier.padding(8.dp)
+        modifier = Modifier
+            .padding(8.dp)
             .clip(RoundedCornerShape(4.dp))
             .background(MaterialTheme.colors.surface)
             .clickable(onClick = {})
@@ -49,7 +60,9 @@ fun PhotographCard() {
 
         }
         Column(
-            modifier = Modifier.padding(start = 8.dp).align(Alignment.CenterVertically)
+            modifier = Modifier
+                .padding(start = 8.dp)
+                .align(Alignment.CenterVertically)
         ) {
             Text("Alfred Sisley", fontWeight = FontWeight.Bold)
             CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
@@ -64,6 +77,6 @@ fun PhotographCard() {
 @Composable
 fun DefaultPreview() {
     ComposeLayoutTheme {
-        PhotographCard()
+        ComposeLayout()
     }
 }
