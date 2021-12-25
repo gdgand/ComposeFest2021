@@ -9,8 +9,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
@@ -29,8 +31,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeLayoutTheme {
-                ComposeLayout()
+                SimpleList()
             }
+        }
+    }
+}
+
+@Composable
+fun SimpleList() {
+    val scrollState = rememberScrollState()
+    Column(
+        modifier = Modifier.verticalScroll(scrollState)
+    ) {
+        repeat(100) {
+            Text("Item #$it")
         }
     }
 }
@@ -51,7 +65,10 @@ fun ComposeLayout() {
             )
         }
     ) { innerPadding ->
-        BodyContent(Modifier.padding(innerPadding).padding(8.dp)) // option1: add padding here
+        BodyContent(
+            Modifier
+                .padding(innerPadding)
+                .padding(8.dp)) // option1: add padding here
     }
 }
 
@@ -97,6 +114,6 @@ fun PhotographCard() {
 @Composable
 fun DefaultPreview() {
     ComposeLayoutTheme {
-        ComposeLayout()
+        SimpleList()
     }
 }
