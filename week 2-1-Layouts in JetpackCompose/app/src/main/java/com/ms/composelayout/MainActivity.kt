@@ -18,8 +18,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.layout.FirstBaseline
+import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -34,9 +36,42 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            // 새로운 모디파이어 적용
+            // 커스텀 레이아웃 적용
             ComposeLayoutTheme {
-                Text(text = "Hi there", Modifier.firstBaselineToTop(32.dp))
+                //Text(text = "Hi there", Modifier.firstBaselineToTop(32.dp))
+                BodyContent()
+            }
+        }
+    }
+}
+
+/**
+ * 커스텀 레이아웃의 매개변수로 Modifier, @Composable() -> Unit 받아야 한다.
+ * Layout 함수의 마지막 인자는 Modifier.layout으로 트레일링 람다로 빠진다.
+ *
+ * Modifier.layout의 children은 measureables 이고 각각의 child를 measure 한뒤
+ * placeables로 받는다.
+ *
+ * layout의 최대 높이, 너비를 매개 변수로 넘겨준 뒤, 내부에 placeables를 하나씩 위치시킨다.
+ */
+@Composable
+fun CustomLayout(
+    modifier: Modifier,
+    content: @Composable () -> Unit
+) {
+    Layout(
+        modifier = modifier,
+        content = content
+    ) { measurables, constraints ->
+        val placeables = measurables.map { measurable ->
+            measurable.measure(constraints)
+        }
+        var yPosition = 0
+
+        layout(constraints.maxWidth, constraints.maxHeight) {
+            placeables.forEach{ placeable ->
+                placeable.placeRelative(x = 0, y = yPosition)
+                yPosition += placeable.height
             }
         }
     }
@@ -157,9 +192,15 @@ fun ComposeLayout() {
 
 @Composable
 fun BodyContent(modifier: Modifier = Modifier) {
-    Column(modifier = modifier.padding(8.dp)) { // option2: add padding here
-        Text(text = "Hi there!")
-        Text(text = "Thanks for going through the Layouts codelab")
+//    Column(modifier = modifier.padding(8.dp)) { // option2: add padding here
+//        Text(text = "Hi there!")
+//        Text(text = "Thanks for going through the Layouts codelab")
+//    }
+    CustomLayout(modifier = modifier.padding(8.dp)) {
+        Text("MyOwnColumn")
+        Text("place items")
+        Text("vertically")
+        Text("We've done it manually")
     }
 }
 
@@ -197,7 +238,10 @@ fun PhotographCard() {
 @Composable
 fun DefaultPreview() {
     ComposeLayoutTheme {
-//        ImageList()
-        Text(text = "Hi there", Modifier.firstBaselineToTop(32.dp))
+// 커스텀 레이아웃 적용
+        ComposeLayoutTheme {
+            //Text(text = "Hi there", Modifier.firstBaselineToTop(32.dp))
+            BodyContent()
+        }
     }
 }
