@@ -18,9 +18,13 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.AlignmentLine
+import androidx.compose.ui.layout.FirstBaseline
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.ms.composelayout.ui.theme.ComposeLayoutTheme
@@ -30,12 +34,42 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            // 새로운 모디파이어 적용
             ComposeLayoutTheme {
-                ImageList()
+                Text(text = "Hi there", Modifier.firstBaselineToTop(32.dp))
             }
         }
     }
 }
+
+/**
+ * 커스텀 레이아웃을 만드려면 기본 제공되는 모디파이어가 아닌
+ * 새로운 모디파이어를 만들어야 한다. Modifier.layout{ measurable, constaraints -> ...}
+ *
+ * measurable: 레이아웃 내의 측정, 위치되어야 하는 child
+ * constarints: child의 최소, 최대 너비, 높이
+ *
+ * measurable.measure()로 placeable을 받고
+ * layout function 내부에서 placeable.placeRelative()로 child 배치
+ */
+fun Modifier.firstBaselineToTop(
+    firstBaselineToTop: Dp
+) = this.then(
+    layout {measurable, constraints ->
+        // measure size of child component
+        val placeable = measurable.measure(constraints)
+
+        // check child component has baseline
+        check(placeable[FirstBaseline] != AlignmentLine.Unspecified)
+        val firstBaseline = placeable[FirstBaseline]
+
+        val placeableY = firstBaselineToTop.roundToPx() - firstBaseline
+        val height = placeable.height + placeableY
+        layout(placeable.width, height) {
+            placeable.placeRelative(0, placeableY)
+        }
+    }
+)
 
 @Composable
 fun SimpleList() {
@@ -163,6 +197,7 @@ fun PhotographCard() {
 @Composable
 fun DefaultPreview() {
     ComposeLayoutTheme {
-        ImageList()
+//        ImageList()
+        Text(text = "Hi there", Modifier.firstBaselineToTop(32.dp))
     }
 }
