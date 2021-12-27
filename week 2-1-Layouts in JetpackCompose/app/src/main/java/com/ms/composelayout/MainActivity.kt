@@ -191,7 +191,7 @@ fun ComposeLayout() {
 }
 
 @Composable
-fun BodyContent(modifier: Modifier = Modifier) {
+private fun BodyContent(modifier: Modifier = Modifier) {
 //    Column(modifier = modifier.padding(8.dp)) { // option2: add padding here
 //        Text(text = "Hi there!")
 //        Text(text = "Thanks for going through the Layouts codelab")
